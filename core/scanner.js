@@ -81,7 +81,7 @@ class DependenciesScanner {
     this.container.addInjectable(component, token)
   }
   storeRoute(route, token) {
-    this.container.addContainer(route, token)
+    this.container.addController(route, token)
   }
   reflectMetadata(metatype, metadataKey) {
     return Reflect.getMetadata(metadataKey, metatype) || []

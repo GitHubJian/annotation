@@ -10,7 +10,6 @@ const factory = require('../core/nest-factory')
 const AppModule = require('./modules/app')
 
 async function bootstrap() {
-  debugger
   await factory.Factory.create(AppModule)
 }
 

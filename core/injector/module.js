@@ -13,6 +13,7 @@ class Module {
     this._relatedModules = new Set()
     this._components = new Map()
     this._injectables = new Map()
+    this._routes = new Map();
     this.addCoreInjectables(container)
     this._id = random_string_generator_util.randomStringGenerator()
   }
@@ -96,6 +97,14 @@ class Module {
       isResolved: false
     })
     return component.name
+  }
+  addRoute(route) {
+    this._routes.set(route.name, {
+      name: route.name,
+      metatype: route,
+      instance: null,
+      isResolved: false
+    })
   }
   addRelatedModule(relatedModule) {
     this._relatedModules.add(relatedModule)

@@ -14,6 +14,8 @@ class ExceptionZone {
     try {
       await fn()
     } catch (e) {
+      debugger
+      console.log(e);
       this.exceptionHandler.handle(e)
       throw messages.UNHANDLED_RUNTIME_EXCEPTION
     }

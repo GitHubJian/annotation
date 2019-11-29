@@ -4,6 +4,7 @@ const hash = require('object-hash')
 class ModuleTokenFactory {
   create(metatype, scope) {
     const reflectedScope = this.reflectScope(metatype)
+    const isSingleScoped = reflectedScope === true;
     const opaqueToken = {
       module: this.getModuleName(metatype),
       scope: isSingleScoped ? this.getScopeStack(scope) : reflectedScope

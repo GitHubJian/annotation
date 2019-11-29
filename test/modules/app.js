@@ -1,7 +1,10 @@
 const { Module } = require('../../common')
+const AppController = require('./controller')
+const AppService = require('./service')
 
 @Module({
-  // controllers: []
+  providers: [AppService],
+  controllers: [AppController]
 })
 class AppModule {}
 

@@ -18,9 +18,11 @@ class FactoryStatic {
     )
     try {
       await exception_zone.ExceptionZone.asyncRun(async function() {
-        await dependenciesScanner.scan(module)
         debugger
+        await dependenciesScanner.scan(module)
         await instanceLoader.createInstancesOfDependencies()
+        container
+        debugger
       })
     } catch (e) {
       process.abort()

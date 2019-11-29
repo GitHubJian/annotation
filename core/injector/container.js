@@ -16,7 +16,6 @@ class Container {
     if (this.modules.has(token)) {
       return
     }
-    debugger
     const module = new module1.Module(type, scope, this)
     this.modules.set(token, module)
   }
