@@ -1,0 +1,1 @@
+const Injectrable = require('../../common/decorators/core/');
